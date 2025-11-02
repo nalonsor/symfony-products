@@ -44,7 +44,7 @@ The application uses a `.env` file for environment configuration. You'll need to
 2.  Open `.env.local` and update the `DATABASE_URL` variable with your database credentials. For example:
     ```
     # .env.local
-    DATABASE_URL="mysql://admin:secret@127.0.0.1:3306/products?serverVersion=8.4.3&charset=utf8mb4"
+    DATABASE_URL="mysql://dbUser:dbPassword@127.0.0.1:3306/dbName?serverVersion=8.4.3&charset=utf8mb4"
     ```
     Make sure the user, password, and database name (`products`) are correct for your local setup.
 
