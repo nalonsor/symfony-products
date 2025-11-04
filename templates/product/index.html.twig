@@ -4,7 +4,14 @@
 
 {% block body %}
 
-<table>
+<div class="container mt-4">
+    <h1>Product List</h1>
+
+    <div class="mb-3">
+        <a href="{{ path('product_new') }}" class="btn btn-primary">Create New Product</a>
+    </div>
+
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>Name</th>
@@ -15,11 +22,16 @@
     <tbody>
         {% for product in products %}
             <tr>
-                <td>{{ product.name }}</td>
+                <td>
+                    <a href="{{ path('product_show', { id: product.id }) }}">
+                    {{ product.name }}
+                    </a>
+                </td>
                 <td>{{ product.description }}</td>
                 <td>{{ product.size }}</td>
             </tr>
         {% endfor %}
     </tbody>
 </table
+</div>
 {% endblock %}
